@@ -1,0 +1,9 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: App
+metadata:
+  name: gateway-service-app-create
+spec:
+  forProvider:
+    name: gateway-service
+    teamowner: shipa-admin-team
+    framework: cp-prod

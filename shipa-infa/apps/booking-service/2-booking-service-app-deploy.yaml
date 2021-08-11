@@ -1,0 +1,8 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppDeploy
+metadata:
+  name: booking-service-deploy
+spec:
+  forProvider:
+    app: booking-service
+    image: "gcr.io/cosimages-206514/booking-service@sha256:e639bfc7c0926be16f6b59214cc0753d47b168e342bea5e2d34d8f47dbdded27"

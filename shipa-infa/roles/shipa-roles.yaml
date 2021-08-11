@@ -1,0 +1,19 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: Role
+metadata:
+  name: cprole1-creater
+spec:
+  forProvider:
+    name: cprole1
+    context: app
+
+---
+
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: Permission
+metadata:
+  name: cprole1-permission-add
+spec:
+  forProvider:
+    name: cprole1
+    permission: ["app.read", "app.deploy"]

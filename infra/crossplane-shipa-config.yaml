@@ -1,0 +1,10 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: ProviderConfig
+metadata:
+  name: default
+spec:
+  credentials:
+    source: ShipaConnectionSecret
+    connectionSecretRef:
+      name: crossplane-secret
+      namespace: crossplane-system

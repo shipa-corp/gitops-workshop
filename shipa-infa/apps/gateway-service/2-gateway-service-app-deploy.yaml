@@ -1,0 +1,8 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppDeploy
+metadata:
+  name: gateway-service-deploy
+spec:
+  forProvider:
+    app: gateway-service
+    image: "gcr.io/cosimages-206514/api-gateway@sha256:ea7e9efe455f634ab3d9abaae361717c771a9bf4ab8881d005d3cf4b10195e1a"

@@ -1,0 +1,76 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: Framework
+metadata:
+  name: dev
+spec:
+  forProvider:
+    shipaFramework: dev
+    resources:
+      general:
+        setup:
+          provisioner: kubernetes
+        router: traefik
+        appQuota:
+          limit: "4"
+        security:
+          disableScan: true
+          scanPlatformLayers: false
+        networkPolicy:
+          ingress:
+            policy_mode: allow-all
+          egress:
+            policy_mode: allow-all
+          disableAppPolicies: false
+
+---
+
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: Framework
+metadata:
+  name: qa
+spec:
+  forProvider:
+    shipaFramework: qa
+    resources:
+      general:
+        setup:
+          provisioner: kubernetes
+        router: traefik
+        appQuota:
+          limit: "8"
+        security:
+          disableScan: true
+          scanPlatformLayers: false
+        networkPolicy:
+          ingress:
+            policy_mode: allow-all
+          egress:
+            policy_mode: allow-all
+          disableAppPolicies: false
+
+---
+
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: Framework
+metadata:
+  name: prod
+spec:
+  forProvider:
+    shipaFramework: prod
+    resources:
+      general:
+        setup:
+          provisioner: kubernetes
+        router: traefik
+        appQuota:
+          limit: "10"
+        security:
+          disableScan: true
+          scanPlatformLayers: false
+        networkPolicy:
+          ingress:
+            policy_mode: allow-all
+          egress:
+            policy_mode: allow-all
+          disableAppPolicies: false
+

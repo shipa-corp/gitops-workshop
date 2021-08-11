@@ -1,0 +1,8 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppDeploy
+metadata:
+  name: sn-app1-deploy
+spec:
+  forProvider:
+    app: sn-app1
+    image: "vfarcic/devops-toolkit-series:latest"

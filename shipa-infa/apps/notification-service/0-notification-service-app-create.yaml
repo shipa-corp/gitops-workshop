@@ -1,0 +1,9 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: App
+metadata:
+  name: notification-service-create
+spec:
+  forProvider:
+    name: notification-service
+    teamowner: shipa-admin-team
+    framework: cp-prod

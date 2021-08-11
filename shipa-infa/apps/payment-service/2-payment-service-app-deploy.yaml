@@ -1,0 +1,8 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppDeploy
+metadata:
+  name: payment-service-deploy
+spec:
+  forProvider:
+    app: payment-service
+    image: "gcr.io/cosimages-206514/payment-service@sha256:b1c311b37fb6c74ef862e93288aa869f014e7b77e755a4d71481fe5689204d31"

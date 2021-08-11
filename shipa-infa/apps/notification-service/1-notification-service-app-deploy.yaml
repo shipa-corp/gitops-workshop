@@ -1,0 +1,8 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppDeploy
+metadata:
+  name: notification-service-deploy
+spec:
+  forProvider:
+    app: notification-service
+    image: "gcr.io/cosimages-206514/notification-service@sha256:ca71c0decb3e9194474b9ea121ab0a3432b57beb07f9297fa1233f8f3d6a2118"

@@ -1,0 +1,24 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppDeploy
+metadata:
+  name: k8-app1-deploy
+spec:
+  forProvider:
+    app: k8-app1
+    image: "ghcr.io/podtato-head/podtatoserver:v0.1.1"
+
+
+---
+
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: NetworkPolicy
+metadata:
+  name: netpolicy-k8-app1
+spec:
+  forProvider:
+    app: k8-app1
+    networkPolicy:
+      ingress:
+        policy_mode: allow-all
+      egress:
+        policy_mode: allow-all

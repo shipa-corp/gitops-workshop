@@ -1,0 +1,9 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: App
+metadata:
+  name: catalog-service-create
+spec:
+  forProvider:
+    name: catalog-service
+    teamowner: shipa-admin-team
+    framework: cp-prod

@@ -1,0 +1,13 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppEnv
+metadata:
+  name: ui-service-env
+spec:
+  forProvider:
+    app: ui-service
+    app_env:
+      envs:
+        - name: REACT_APP_API_SERVER
+          value: 
+      norestart: true
+      private: true

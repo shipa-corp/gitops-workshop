@@ -1,0 +1,11 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppDeploy
+metadata:
+  name: bulletin-sample-deploy
+spec:
+  forProvider:
+    app: bulletin-sample
+    image: "ghcr.io/podtato-head/podtatoserver:v0.1.1"
+    steps: 5
+    step-weight: 20
+    step-interval: 1m

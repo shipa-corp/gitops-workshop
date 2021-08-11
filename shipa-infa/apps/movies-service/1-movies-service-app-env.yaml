@@ -1,0 +1,19 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppEnv
+metadata:
+  name: movies-service-env
+spec:
+  forProvider:
+    app: movies-service
+    app_env:
+      envs:
+        - name: DB_SERVER
+          value: xx.xx.xx.xx:27017
+        - name: DB_USER
+          value: shipau
+        - name: DB_PASS
+          value: shipapass
+        - name: DB
+          value: movies
+      norestart: true
+      private: true

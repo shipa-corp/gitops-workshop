@@ -1,0 +1,9 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: App
+metadata:
+  name: sn-app2-create
+spec:
+  forProvider:
+    name: sn-app2
+    teamowner: shipa-admin-team
+    framework: aws-dev

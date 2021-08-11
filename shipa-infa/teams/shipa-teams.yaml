@@ -1,0 +1,7 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: Team
+metadata:
+  name: cp-team-create
+spec:
+  forProvider:
+    name: cpt1

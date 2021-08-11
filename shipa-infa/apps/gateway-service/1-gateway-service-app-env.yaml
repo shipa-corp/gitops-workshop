@@ -1,0 +1,17 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppEnv
+metadata:
+  name: gateway-service-env
+spec:
+  forProvider:
+    app: gateway-service
+    app_env:
+      envs:
+        - name: API_BOOKING
+          value: 
+        - name: API_MOVIES
+          value: 
+        - name: API_CINEMA
+          value: 
+      norestart: true
+      private: true

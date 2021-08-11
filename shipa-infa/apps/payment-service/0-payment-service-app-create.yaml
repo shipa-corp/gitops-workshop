@@ -1,0 +1,9 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: App
+metadata:
+  name: payment-service-create
+spec:
+  forProvider:
+    name: payment-service
+    teamowner: shipa-admin-team
+    framework: cp-prod

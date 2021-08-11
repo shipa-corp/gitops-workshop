@@ -1,0 +1,8 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppDeploy
+metadata:
+  name: movies-service-deploy
+spec:
+  forProvider:
+    app: movies-service
+    image: "gcr.io/cosimages-206514/movies-service@sha256:da99b1f332c0f07dfee7c71fc4d6d09cf6a26299594b6d1ae1d82d57968b3c57"

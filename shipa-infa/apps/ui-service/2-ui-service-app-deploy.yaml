@@ -1,0 +1,8 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: AppDeploy
+metadata:
+  name: ui-service-deploy
+spec:
+  forProvider:
+    app: ui-service
+    image: "gcr.io/cosimages-206514/ui-cinemas@sha256:81f61cf1368b65e90a70637f9aa1c25ed741495d391cbbcea807d031e0c2a5e3"

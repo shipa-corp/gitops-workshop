@@ -1,0 +1,35 @@
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: Cluster
+metadata:
+  name: argo-demo1
+spec:
+  forProvider:
+    name: argo-demo1
+    endpoint:
+      addresses: ["https://xx.xx.xx.xx"]
+      caCert: |
+        -----BEGIN CERTIFICATE-----
+        -----END CERTIFICATE-----
+      token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    resources:
+      frameworks:
+        name: ["dev", "qa"]
+
+---
+
+apiVersion: shipa.crossplane.io/v1alpha1
+kind: Cluster
+metadata:
+  name: argo-demo2
+spec:
+  forProvider:
+    name: argo-demo2
+    endpoint:
+      addresses: ["https://xx.xx.xx.xx"]
+      caCert: |
+        -----BEGIN CERTIFICATE-----
+        -----END CERTIFICATE-----
+      token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    resources:
+      frameworks:
+        name: ["prod"]
