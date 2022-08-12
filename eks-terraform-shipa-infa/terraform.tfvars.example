@@ -1,0 +1,33 @@
+aws_accounts = ["222222222222"]
+
+aws_profile = "default"
+
+
+# ----------------------------------------------------------
+
+# AWS IAM Roles - this will be used later to decide who can access the cluster
+# aws_roles = [
+#   {
+#     rolearn  = "arn:aws:iam::222222222222:user1/username"
+#     username = "username"
+#     groups   = ["Admins"]
+#   },
+# ]
+
+# AWS IAM Users - this will be used later to decide who can access the cluster
+# aws_users = [
+#   {
+#     rolearn  = "arn:aws:iam::222222222222:user1/username"
+#     username = "username"
+#     groups   = ["Admins"]
+#   },
+# ]
+
+
+cluster_name = "dev"
+
+# AWS region for all resources(default: eu-central-1)
+ aws_region = "eu-central-1"
+
+# Kubernetes version used for creating workload cluster(default: 1.21)
+ cluster_version = "1.21"
