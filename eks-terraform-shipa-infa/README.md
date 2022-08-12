@@ -43,7 +43,7 @@ terraform apply
 #Sets up the EKS cluster config
 aws eks --region us-west-2 update-kubeconfig --name <cluster_name>
 
-```bash
+
 #Install Shipa onto your cluster
 ./install.sh
 # IP
