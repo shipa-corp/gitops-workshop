@@ -44,6 +44,9 @@ aws eks --region us-west-2 update-kubeconfig --name <cluster_name>
 
 
 #Install Shipa onto your cluster
+cat install.sh
+vi install.sh
+add User and Password 
 ./install.sh
 # IP
 #kubectl --namespace=shipa-system get svc shipa-ingress-nginx -o jsonpath="{.status.loadBalancer.ingress[0].hostname}"
