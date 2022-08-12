@@ -29,12 +29,11 @@ aws iam list-groups
 
 ### Set up a managed kubernetes cluster on EKS
 
-- Navigate into the `eks` directory
 - Copy `terraform.tfvars.example` file to `terraform.tfvars` file and fill in missing configuration parameters
 - Open a terminal and run the following:
 
 ```bash
-cd aws/eks # if you haven't done so already
+
 # Initializes the directory
 terraform init
 # Sets up the EKS cluster
